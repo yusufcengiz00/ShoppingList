@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap ve ikon kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping List</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center">Shopping List</h1>
+
+        <!-- Form: Yeni ürün ekleme alanı -->
+        <form class="shopping-form border rounded p-3 mb-3">
+            <div class="input-group">
+                <input type="text" id="item_name" class="form-control" placeholder="Eleman Ekle">
+                <button class="btn btn-primary" type="submit">
+                    <i class="bi bi-plus"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Eğer hiç eleman yoksa gösterilen uyarı -->
+        <div class="alert alert-danger">No items</div>
+
+        <!-- Filtre butonları -->
+        <div class="filter-buttons border rounded p-3 mb-3">
+            <button item-filter="all" class="btn btn-primary">All</button>
+            <button item-filter="incompleted" class="btn btn-secondary">Incompleted</button>
+            <button item-filter="completed" class="btn btn-secondary">Completed</button>
+        </div>
+    
+        <!-- Liste -->
+        <ul class="shopping-list list-unstyled"></ul>
+
+        <!-- Listeyi tamamen silme butonu -->
+        <button class="btn btn-outline-danger clear">Clear</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
